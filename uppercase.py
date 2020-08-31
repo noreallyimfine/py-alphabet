@@ -1,83 +1,89 @@
 import turtle
 
+'''
+Use turtle module to draw all upper case letters in alphabet
+'''
 class Upper:
-    def A():
+    def __init__(self, scale=50):
+        self.scale = scale
+
+    def A(self):
         pass
     
-    def B():
+    def B(self):
         pass
     
-    def C():
+    def C(self):
         pass
     
-    def D():
+    def D(self):
         pass
     
-    def E():
+    def E(self):
         pass
     
-    def F():
+    def F(self):
         pass
     
-    def G():
+    def G(self):
         pass
     
-    def H():
+    def H(self):
         pass
     
-    def I():
+    def I(self):
         pass
     
-    def J():
+    def J(self):
         pass
     
-    def K():
+    def K(self):
         pass
     
-    def L():
+    def L(self):
         pass
     
-    def M():
+    def M(self):
         pass
     
-    def N():
+    def N(self):
         pass
     
-    def O():
+    def O(self):
         pass
     
-    def P():
+    def P(self):
         pass
     
-    def Q():
+    def Q(self):
         pass
     
-    def R():
+    def R(self):
         pass
     
-    def R():
+    def R(self):
         pass
     
-    def S():
+    def S(self):
         pass
 
-    def T():
+    def T(self):
         pass
     
-    def U():
+    def U(self):
         pass
     
-    def V():
+    def V(self):
         pass
     
-    def W():
+    def W(self):
         pass
     
-    def X():
+    def X(self):
         pass
     
-    def Y():
+    def Y(self):
         pass
     
-    def Z():
+    def Z(self):
         pass
