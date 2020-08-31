@@ -95,7 +95,14 @@ class Upper(Turtle):
         pass
     
     def I(self):
-        pass
+        self.forward(self.scale / 2)
+        self.back(self.scale / 4)
+        self.left(90)
+        self.forward(self.scale)
+        self.left(90)
+        self.forward(self.scale / 4)
+        self.left(180)
+        self.forward(self.scale / 2)
     
     def J(self):
         pass
