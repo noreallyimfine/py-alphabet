@@ -83,6 +83,15 @@ class Upper(Turtle):
         pass
     
     def H(self):
+        starting_x, starting_y = self.pos()
+        self.left(90)
+        self.forward(self.scale)
+        self.move_without_draw(starting_x, starting_y + self.scale // 2)
+        self.right(90)
+        self.forward(self.scale // 2)
+        self.move_without_draw(starting_x + self.scale // 2, starting_y)
+        self.left(90)
+        self.forward(self.scale)
         pass
     
     def I(self):
