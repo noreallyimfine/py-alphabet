@@ -92,7 +92,6 @@ class Upper(Turtle):
         self.move_without_draw(starting_x + self.scale // 2, starting_y)
         self.left(90)
         self.forward(self.scale)
-        pass
     
     def I(self):
         self.forward(self.scale / 2)
@@ -108,7 +107,14 @@ class Upper(Turtle):
         pass
     
     def K(self):
-        pass
+        self.left(90)
+        self.forward(self.scale)
+        self.back(self.scale / 2)
+        self.right(45)
+        self.forward(self.scale * .70)
+        self.back(self.scale * .70)
+        self.right(90)
+        self.forward(self.scale * .70)
     
     def L(self):
         self.forward(self.scale / 1.5)
