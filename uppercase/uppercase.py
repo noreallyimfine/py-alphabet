@@ -139,7 +139,12 @@ class Upper(Turtle):
         pass
 
     def T(self):
-        pass
+        self.move_without_draw(self.xcor() + self.scale / 2, self.ycor())
+        self.left(90)
+        self.forward(self.scale)
+        self.left(90)
+        self.forward(self.scale / 2)
+        self.back(self.scale)
     
     def U(self):
         pass
