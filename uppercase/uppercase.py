@@ -1,44 +1,47 @@
-import turtle
+from turtle import Turtle
 
 '''
-Use turtle module to draw all upper case letters in alphabet
+Use self module to draw all upper case letters in alphabet
 
 (8/31/2020): Currently assumes facing original direction (right). 
 '''
-class Upper:
-
-    # set pointer off by default
-    turtle.ht()
+class Upper(Turtle):
 
 
-    def __init__(self, scale=100, spacing=15):
+
+    def __init__(self, scale=100, spacing=15, pointer_on=False, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.scale = scale
         self.spacing = spacing
 
+        # set pointer off by default
+        if not pointer_on:
+            self.ht()
+
     def A(self):
-        turtle.left(75)
-        turtle.forward(self.scale)
-        turtle.right(150)
-        turtle.forward(self.scale)
-        turtle.left(180)
-        turtle.forward(self.scale * .45)
-        turtle.left(75)
-        turtle.forward(30)
+        self.left(75)
+        self.forward(self.scale)
+        self.right(150)
+        self.forward(self.scale)
+        self.left(180)
+        self.forward(self.scale * .45)
+        self.left(75)
+        self.forward(30)
     
     def B(self):
-        turtle.left(90)
-        turtle.forward(self.scale)
-        turtle.right(90)
-        turtle.circle(-25, 180)
-        turtle.left(180)
-        turtle.circle(-25, 180)
+        self.left(90)
+        self.forward(self.scale)
+        self.right(90)
+        self.circle(-25, 180)
+        self.left(180)
+        self.circle(-25, 180)
     
     def C(self):
-        turtle.penup()
-        x, y = turtle.pos()
-        turtle.setpos(x + self.scale, y + (self.scale * 0.75))
-        turtle.pendown()
-        turtle.circle(-self.scale//2, -240)
+        self.penup()
+        x, y = self.pos()
+        self.setpos(x + self.scale, y + (self.scale * 0.75))
+        self.pendown()
+        self.circle(-self.scale//2, -240)
     
     def D(self):
         pass
