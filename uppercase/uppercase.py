@@ -44,13 +44,20 @@ class Upper(Turtle):
     def C(self):
         # New plan
         # go up half scale
-        
+        self.move_without_draw(self.xcor(), self.ycor() + (self.scale // 2))
+        starting_x, starting_y = self.pos()
         # draw 2/5 circle
+        self.circle(self.scale // 2, 144)
         # back to pre-draw loc
+        self.move_without_draw(starting_x, starting_y)
         # draw 2/5 in down direction
+        self.circle(self.scale // 2, -144)
     
     def D(self):
-        pass
+        self.left(90)
+        self.forward(self.scale)
+        self.right(90)
+        self.circle(-self.scale // 2, 180)
     
     def E(self):
         pass
