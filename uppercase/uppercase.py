@@ -29,8 +29,9 @@ class Upper:
         turtle.left(90)
         turtle.forward(self.scale)
         turtle.right(90)
-        turtle.circle(25, 180)
-        pass
+        turtle.circle(-25, 180)
+        turtle.left(180)
+        turtle.circle(-25, 180)
     
     def C(self):
         pass
