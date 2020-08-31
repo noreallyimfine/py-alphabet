@@ -60,10 +60,24 @@ class Upper(Turtle):
         self.circle(-self.scale // 2, 180)
     
     def E(self):
-        pass
+        starting_x, starting_y = self.pos()
+        self.forward(self.scale // 2)
+        self.move_without_draw(starting_x, starting_y)
+        self.left(90)
+        self.forward(self.scale)
+        self.right(90)
+        self.forward(self.scale // 2)
+        self.move_without_draw(starting_x, starting_y + (self.scale // 2))
+        self.forward(self.scale // 3)
     
     def F(self):
-        pass
+        starting_x, starting_y = self.pos()
+        self.left(90)
+        self.forward(self.scale)
+        self.right(90)
+        self.forward(self.scale // 2)
+        self.move_without_draw(starting_x, starting_y + (self.scale // 2))
+        self.forward(self.scale // 3)
     
     def G(self):
         pass
