@@ -26,6 +26,10 @@ class Upper:
         turtle.forward(30)
     
     def B(self):
+        turtle.left(90)
+        turtle.forward(self.scale)
+        turtle.right(90)
+        turtle.circle(25, 180)
         pass
     
     def C(self):
@@ -71,9 +75,6 @@ class Upper:
         pass
     
     def Q(self):
-        pass
-    
-    def R(self):
         pass
     
     def R(self):
