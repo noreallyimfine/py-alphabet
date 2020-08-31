@@ -111,6 +111,10 @@ class Upper(Turtle):
         pass
     
     def L(self):
+        self.forward(self.scale / 1.5)
+        self.back(self.scale / 1.5)
+        self.left(90)
+        self.forward(self.scale)
         pass
     
     def M(self):
