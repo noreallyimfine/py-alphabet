@@ -34,7 +34,11 @@ class Upper:
         turtle.circle(-25, 180)
     
     def C(self):
-        pass
+        turtle.penup()
+        x, y = turtle.pos()
+        turtle.setpos(x + self.scale, y + (self.scale * 0.75))
+        turtle.pendown()
+        turtle.circle(-self.scale//2, -240)
     
     def D(self):
         pass
