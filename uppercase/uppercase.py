@@ -2,13 +2,28 @@ import turtle
 
 '''
 Use turtle module to draw all upper case letters in alphabet
+
+(8/31/2020): Currently assumes facing original direction (right). 
 '''
 class Upper:
-    def __init__(self, scale=50):
+
+    # set pointer off by default
+    turtle.ht()
+
+
+    def __init__(self, scale=100, spacing=15):
         self.scale = scale
+        self.spacing = spacing
 
     def A(self):
-        pass
+        turtle.left(75)
+        turtle.forward(self.scale)
+        turtle.right(150)
+        turtle.forward(self.scale)
+        turtle.left(180)
+        turtle.forward(self.scale * .45)
+        turtle.left(75)
+        turtle.forward(30)
     
     def B(self):
         pass
