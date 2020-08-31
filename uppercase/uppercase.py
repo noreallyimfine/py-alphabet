@@ -18,6 +18,11 @@ class Upper(Turtle):
         if not pointer_on:
             self.ht()
 
+    def move_without_draw(self, x, y):
+        self.pu()
+        self.setpos(x, y)
+        self.pd()
+
     def A(self):
         self.left(75)
         self.forward(self.scale)
@@ -37,11 +42,12 @@ class Upper(Turtle):
         self.circle(-25, 180)
     
     def C(self):
-        self.penup()
-        x, y = self.pos()
-        self.setpos(x + self.scale, y + (self.scale * 0.75))
-        self.pendown()
-        self.circle(-self.scale//2, -240)
+        # New plan
+        # go up half scale
+        
+        # draw 2/5 circle
+        # back to pre-draw loc
+        # draw 2/5 in down direction
     
     def D(self):
         pass
