@@ -172,7 +172,12 @@ class Upper(Turtle):
         pass
     
     def X(self):
-        pass
+        starting_x, _ = self.pos()
+        self.left(60)
+        self.forward(self.scale)
+        self.move_without_draw(starting_x, self.ycor())
+        self.right(120)
+        self.forward(self.scale)
     
     def Y(self):
         pass
