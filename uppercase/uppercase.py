@@ -139,7 +139,12 @@ class Upper(Turtle):
         pass
     
     def R(self):
-        pass
+        self.left(90)
+        self.forward(self.scale)
+        self.right(90)
+        self.circle(-self.scale // 4, 180)
+        self.left(135)
+        self.forward(self.scale * 0.7)
     
     def S(self):
         pass
@@ -156,7 +161,12 @@ class Upper(Turtle):
         pass
     
     def V(self):
-        pass
+        starting_x, starting_y = self.pos()
+        self.move_without_draw(starting_x, starting_y + self.scale)
+        self.right(30)
+        self.forward(self.scale)
+        self.left(90)
+        self.forward(self.scale)
     
     def W(self):
         pass
