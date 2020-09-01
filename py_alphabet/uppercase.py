@@ -34,16 +34,7 @@ class Upper(Alphabet):
         self.circle(-25, 180)
     
     def C(self):
-        # New plan
-        # go up half scale
-        self.move_without_draw(self.xcor(), self.ycor() + (self.scale // 2))
-        starting_x, starting_y = self.pos()
-        # draw 2/5 circle
-        self.circle(self.scale // 2, 144)
-        # back to pre-draw loc
-        self.move_without_draw(starting_x, starting_y)
-        # draw 2/5 in down direction
-        self.circle(self.scale // 2, -144)
+        pass
     
     def D(self):
         self.left(90)
