@@ -163,9 +163,9 @@ class Upper(Turtle):
     def V(self):
         starting_x, starting_y = self.pos()
         self.move_without_draw(starting_x, starting_y + self.scale)
-        self.right(30)
+        self.right(60)
         self.forward(self.scale)
-        self.left(90)
+        self.left(120)
         self.forward(self.scale)
     
     def W(self):
