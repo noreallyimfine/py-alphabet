@@ -1,1 +1,1 @@
-from .uppercase.uppercase import Upper
+from .uppercase import Upper

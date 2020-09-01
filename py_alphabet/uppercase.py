@@ -1,27 +1,19 @@
-from turtle import Turtle
+from .alphabet import Alphabet
 
 '''
 Use self module to draw all upper case letters in alphabet
 
 (8/31/2020): Currently assumes facing original direction (right). 
 '''
-class Upper(Turtle):
+class Upper(Alphabet):
+    '''
+    Use this class to draw uppercase letters.
 
-
-
+    OPTIONAL ARGS: 
+    '''
     def __init__(self, scale=100, spacing=15, pointer_on=False, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.scale = scale
-        self.spacing = spacing
+        super().__init__(scale, spacing, pointer_on, *args, **kwargs)
 
-        # set pointer off by default
-        if not pointer_on:
-            self.ht()
-
-    def move_without_draw(self, x, y):
-        self.pu()
-        self.setpos(x, y)
-        self.pd()
 
     def A(self):
         self.left(75)
