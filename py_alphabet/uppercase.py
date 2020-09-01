@@ -11,8 +11,8 @@ class Upper(Alphabet):
 
     OPTIONAL ARGS: 
     '''
-    def __init__(self, scale=100, spacing=15, pointer_on=False, *args, **kwargs):
-        super().__init__(scale, spacing, pointer_on, *args, **kwargs)
+    def __init__(self, scale=100, pointer_on=False, *args, **kwargs):
+        super().__init__(scale, pointer_on, *args, **kwargs)
 
 
     def A(self):
@@ -24,6 +24,7 @@ class Upper(Alphabet):
         self.forward(self.scale * .45)
         self.left(75)
         self.forward(30)
+        self._set_next_letter_start()
     
     def B(self):
         self.left(90)
@@ -32,8 +33,10 @@ class Upper(Alphabet):
         self.circle(-25, 180)
         self.left(180)
         self.circle(-25, 180)
+        self._set_next_letter_start()
     
     def C(self):
+        self._set_next_letter_start()
         pass
     
     def D(self):
@@ -41,6 +44,7 @@ class Upper(Alphabet):
         self.forward(self.scale)
         self.right(90)
         self.circle(-self.scale // 2, 180)
+        self._set_next_letter_start()
     
     def E(self):
         starting_x, starting_y = self.pos()
@@ -52,6 +56,7 @@ class Upper(Alphabet):
         self.forward(self.scale // 2)
         self.move_without_draw(starting_x, starting_y + (self.scale // 2))
         self.forward(self.scale // 3)
+        self._set_next_letter_start()
     
     def F(self):
         starting_x, starting_y = self.pos()
@@ -61,8 +66,10 @@ class Upper(Alphabet):
         self.forward(self.scale // 2)
         self.move_without_draw(starting_x, starting_y + (self.scale // 2))
         self.forward(self.scale // 3)
+        self._set_next_letter_start()
     
     def G(self):
+        self._set_next_letter_start()
         pass
     
     def H(self):
@@ -75,6 +82,7 @@ class Upper(Alphabet):
         self.move_without_draw(starting_x + self.scale // 2, starting_y)
         self.left(90)
         self.forward(self.scale)
+        self._set_next_letter_start()
     
     def I(self):
         self.forward(self.scale / 2)
@@ -85,8 +93,10 @@ class Upper(Alphabet):
         self.forward(self.scale / 4)
         self.left(180)
         self.forward(self.scale / 2)
+        self._set_next_letter_start()
     
     def J(self):
+        self._set_next_letter_start()
         pass
     
     def K(self):
@@ -98,27 +108,34 @@ class Upper(Alphabet):
         self.back(self.scale * .70)
         self.right(90)
         self.forward(self.scale * .70)
+        self._set_next_letter_start()
     
     def L(self):
         self.forward(self.scale / 1.5)
         self.back(self.scale / 1.5)
         self.left(90)
         self.forward(self.scale)
+        self._set_next_letter_start()
         pass
     
     def M(self):
+        self._set_next_letter_start()
         pass
     
     def N(self):
+        self._set_next_letter_start()
         pass
     
     def O(self):
+        self._set_next_letter_start()
         pass
     
     def P(self):
+        self._set_next_letter_start()
         pass
     
     def Q(self):
+        self._set_next_letter_start()
         pass
     
     def R(self):
@@ -128,8 +145,10 @@ class Upper(Alphabet):
         self.circle(-self.scale // 4, 180)
         self.left(135)
         self.forward(self.scale * 0.7)
+        self._set_next_letter_start()
     
     def S(self):
+        self._set_next_letter_start()
         pass
 
     def T(self):
@@ -139,8 +158,10 @@ class Upper(Alphabet):
         self.left(90)
         self.forward(self.scale / 2)
         self.back(self.scale)
+        self._set_next_letter_start()
     
     def U(self):
+        self._set_next_letter_start()
         pass
     
     def V(self):
@@ -150,8 +171,10 @@ class Upper(Alphabet):
         self.forward(self.scale)
         self.left(120)
         self.forward(self.scale)
+        self._set_next_letter_start()
     
     def W(self):
+        self._set_next_letter_start()
         pass
     
     def X(self):
@@ -161,9 +184,12 @@ class Upper(Alphabet):
         self.move_without_draw(starting_x, self.ycor())
         self.right(120)
         self.forward(self.scale)
+        self._set_next_letter_start()
     
     def Y(self):
+        self._set_next_letter_start()
         pass
     
     def Z(self):
+        self._set_next_letter_start()
         pass
