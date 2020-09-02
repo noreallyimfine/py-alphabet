@@ -9,9 +9,9 @@ class Alphabet(Turtle):
         super().__init__(*args, **kwargs)
         self.scale = scale
         self.screen = Screen()
-        self._starting_x = -((self.screen.screensize[0] / 2) - 20) 
-        self._starting_y = ((self.screen.screensize[1] / 2) - 15)
-        self.setpos(self._starting_x, self._starting_y)
+        self._starting_x = -((self.screen.screensize()[0] * .8)) 
+        self._starting_y = ((self.screen.screensize()[1] * .8))
+        self.move_without_draw(self._starting_x, self._starting_y)
 
         # set pointer off by default
         if not pointer_on:
@@ -23,6 +23,6 @@ class Alphabet(Turtle):
         self.pd()
 
     def _set_next_letter_start(self, max_x, y):
-        new_x = max_x * 1.05
+        new_x = max_x + (max_x*.05)
         self.move_without_draw(new_x, y)
         self.setheading(0.0)
