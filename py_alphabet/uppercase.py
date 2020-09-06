@@ -22,6 +22,7 @@ class Upper(Alphabet):
         self.right(150)
         self.forward(self.scale)
         max_x, _ = self.pos()
+        print(max_x)
         self.left(180)
         self.forward(self.scale * .45)
         self.left(75)
