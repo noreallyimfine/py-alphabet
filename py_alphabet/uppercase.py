@@ -22,7 +22,6 @@ class Upper(Alphabet):
         self.right(150)
         self.forward(self.scale)
         max_x, _ = self.pos()
-        print(max_x)
         self.left(180)
         self.forward(self.scale * .45)
         self.left(75)
@@ -219,4 +218,11 @@ class Upper(Alphabet):
         pass
     
     def Z(self):
-        pass
+        self.move_without_draw(self.xcor() + self.scale, self.ycor())
+        self.forward(self.scale * .6)
+        self.right(135)
+        self.forward(self.scale)
+        self.left(135)
+        self.forward(self.scale * .6)
+        max_x, y = self.pos()
+        self._set_next_letter_start(max_x, y)

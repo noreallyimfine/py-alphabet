@@ -24,6 +24,5 @@ class Alphabet(Turtle):
 
     def _set_next_letter_start(self, max_x, y):
         new_x = max_x + abs(max_x*.05)
-        print("Max X after set for next letter: ", new_x)
         self.move_without_draw(new_x, y)
         self.setheading(0.0)
