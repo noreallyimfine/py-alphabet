@@ -132,7 +132,14 @@ class Upper(Alphabet):
         self._set_next_letter_start(max_x, starting_y)
     
     def M(self):
-        pass
+        self.left(90)
+        self.forward(self.scale)
+        self.right(170)
+        self.forward(self.scale)
+        self.left(160)
+        self.forward(self.scale)
+        self.right(170)
+        self.forward(self.scale)
     
     def N(self):
         pass
