@@ -132,6 +132,7 @@ class Upper(Alphabet):
         self._set_next_letter_start(max_x, starting_y)
     
     def M(self):
+        _, starting_y = self.pos()
         self.left(90)
         self.forward(self.scale)
         self.right(170)
@@ -140,9 +141,19 @@ class Upper(Alphabet):
         self.forward(self.scale)
         self.right(170)
         self.forward(self.scale)
+        max_x = self.xcor()
+        self._set_next_letter_start(max_x, starting_y)
     
     def N(self):
-        pass
+        _, starting_y = self.pos()
+        self.left(90)
+        self.forward(self.scale)
+        self.right(170)
+        self.forward(self.scale)
+        self.left(170)
+        self.forward(self.scale)
+        max_x = self.xcor()
+        self._set_next_letter_start(max_x, starting_y)
     
     def O(self):
         pass
