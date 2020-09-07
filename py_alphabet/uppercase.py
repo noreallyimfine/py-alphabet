@@ -156,8 +156,12 @@ class Upper(Alphabet):
     
     def O(self):
         starting_x, starting_y = self.pos()
-        self.move_without_draw(starting_x + self.scale / 2, starting_y + self.scale / 2)
-        self.circle(self.scale / 2)
+        self.move_without_draw(starting_x + self.scale / 2, starting_y + self.scale / 4)
+        self.seth(-45)
+        self.circle(self.scale / 4, 90)
+        self.circle(self.scale / 2, 90)
+        self.circle(self.scale / 4, 90)
+        self.circle(self.scale / 2, 90)
         max_x = starting_x + self.scale
         self._set_next_letter_start(max_x, starting_y)
     
