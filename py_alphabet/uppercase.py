@@ -155,7 +155,11 @@ class Upper(Alphabet):
         self._set_next_letter_start(max_x, starting_y)
     
     def O(self):
-        pass
+        starting_x, starting_y = self.pos()
+        self.move_without_draw(starting_x + self.scale / 2, starting_y + self.scale / 2)
+        self.circle(self.scale / 2)
+        max_x = starting_x + self.scale
+        self._set_next_letter_start(max_x, starting_y)
     
     def P(self):
         pass
