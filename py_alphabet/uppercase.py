@@ -3,7 +3,6 @@ from .alphabet import Alphabet
 '''
 Use self module to draw all upper case letters in alphabet
 
-(8/31/2020): Currently assumes facing original direction (right). 
 '''
 class Upper(Alphabet):
     '''
@@ -223,7 +222,17 @@ class Upper(Alphabet):
         self._set_next_letter_start(max_x, starting_y)
     
     def W(self):
-        pass
+        starting_x, starting_y = self.pos()
+        self.move_without_draw(starting_x, starting_y + self.scale)
+        self.right(75)
+        self.forward(self.scale)
+        self.left(150)
+        self.forward(self.scale / 3)
+        self.right(150)
+        self.forward(self.scale / 3)
+        self.left(150)
+        self.forward(self.scale)
+        self._set_next_letter_start(self.xcor(), starting_y)
     
     def X(self):
         starting_x, starting_y = self.pos()
