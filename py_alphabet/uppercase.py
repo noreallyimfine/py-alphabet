@@ -111,7 +111,14 @@ class Upper(Alphabet):
         self._set_next_letter_start(max_x, starting_y)
     
     def J(self):
-        pass
+        starting_x, starting_y = self.pos()
+        self.move_without_draw(starting_x, starting_y + self.scale)
+        self.forward(self.scale * .4)
+        max_x = self.xcor()
+        self.seth(-90)
+        self.forward(self.scale * .8)
+        self.circle(-self.scale * .2, 180)
+        self._set_next_letter_start(max_x, starting_y)
     
     def K(self):
         starting_x, starting_y = self.pos()
