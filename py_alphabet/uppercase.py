@@ -181,7 +181,21 @@ class Upper(Alphabet):
         self._set_next_letter_start(max_x, starting_y)
     
     def Q(self):
-        pass
+        starting_x, starting_y = self.pos()
+        self.move_without_draw(starting_x + self.scale / 2, starting_y + self.scale / 5)
+        self.seth(-45)
+        self.circle(self.scale / 4, 90)
+        self.circle(self.scale / 2, 90)
+        self.circle(self.scale / 4, 90)
+        self.circle(self.scale / 2, 90)
+
+        new_x = starting_x + (self.scale * .75)
+        new_y = starting_y + (self.scale * .25)
+        self.move_without_draw(new_x, new_y)
+        self.seth(-60)
+        self.forward(self.scale / 5)
+        
+        self._set_next_letter_start(self.xcor(), starting_y)
     
     def R(self):
         starting_x, starting_y = self.pos()
@@ -257,8 +271,6 @@ class Upper(Alphabet):
         self.seth(-90)
         self.forward(self.scale / 2)
         self._set_next_letter_start(max_x, starting_y)
-        
-        pass
     
     def Z(self):
         self.move_without_draw(self.xcor() + self.scale, self.ycor())
