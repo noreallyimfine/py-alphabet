@@ -245,6 +245,19 @@ class Upper(Alphabet):
         self._set_next_letter_start(max_x, starting_y)
     
     def Y(self):
+        starting_x, starting_y = self.pos()
+        self.move_without_draw(starting_x, starting_y + self.scale)
+        self.right(60)
+        self.forward(self.scale / 2)
+        mid_x, mid_y = self.pos()
+        self.left(120)
+        self.forward(self.scale / 2)
+        max_x = self.xcor()
+        self.move_without_draw(mid_x, mid_y)
+        self.seth(-90)
+        self.forward(self.scale / 2)
+        self._set_next_letter_start(max_x, starting_y)
+        
         pass
     
     def Z(self):
